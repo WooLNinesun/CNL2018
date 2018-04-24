@@ -222,7 +222,7 @@ authorize {
 #	}
 
 	hourlytrafficcounter
-	hourlytimecounter
+	hourlysessioncounter
 }
 
 

@@ -89,7 +89,7 @@ CREATE TABLE `radacct` (
   KEY `acctstarttime` (`acctstarttime`),
   KEY `acctstoptime` (`acctstoptime`),
   KEY `nasipaddress` (`nasipaddress`)
-) ENGINE=InnoDB AUTO_INCREMENT=114 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=133 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,6 +98,7 @@ CREATE TABLE `radacct` (
 
 LOCK TABLES `radacct` WRITE;
 /*!40000 ALTER TABLE `radacct` DISABLE KEYS */;
+INSERT INTO `radacct` VALUES (130,'5adf796d00000001','f3eaf82f258cb84a','cnl','','','0.0.0.0','1','Wireless-802.11','2018-04-24 18:37:52','2018-04-24 18:51:49',837,'','','',299688,749759,'34-08-04-E0-96-BE','9C-EB-E8-21-B1-11','User-Request','','','192.168.182.2',0,0,''),(131,'5adf7cc500000001','d08b336e9de969f5','cnl','','','0.0.0.0','1','Wireless-802.11','2018-04-24 18:51:54','2018-04-24 19:05:58',844,'','','',335883,1678426,'34-08-04-E0-96-BE','9C-EB-E8-21-B1-11','User-Request','','','192.168.182.2',0,0,''),(132,'5adf801600000001','c2f1236a68e97abc','cnl','','','0.0.0.0','1','Wireless-802.11','2018-04-24 19:06:26',NULL,187,'','','',290091,1838355,'34-08-04-E0-96-BE','9C-EB-E8-21-B1-11','','','','192.168.182.2',0,0,'');
 /*!40000 ALTER TABLE `radacct` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -125,7 +126,7 @@ CREATE TABLE `radcheck` (
 
 LOCK TABLES `radcheck` WRITE;
 /*!40000 ALTER TABLE `radcheck` DISABLE KEYS */;
-INSERT INTO `radcheck` VALUES (1,'ta','Cleartext-Password',':=','tatest'),(4,'cnl','Cleartext-Password',':=','cnl'),(5,'ta','Max-Hourly-Traffic',':=','10485760'),(15,'cnl','Max-Hourly-Session',':=','3600'),(17,'cnl','Max-Hourly-Traffic',':=','10485760'),(18,'ta','Max-Hourly-Session',':=','3600');
+INSERT INTO `radcheck` VALUES (1,'ta','Cleartext-Password',':=','tatest'),(4,'cnl','Cleartext-Password',':=','cnl'),(5,'ta','Max-Hourly-Traffic',':=','1024'),(15,'cnl','Max-Hourly-Session',':=','3600'),(17,'cnl','Max-Hourly-Traffic',':=','10485760'),(18,'ta','Max-Hourly-Session',':=','3600');
 /*!40000 ALTER TABLE `radcheck` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -180,7 +181,7 @@ CREATE TABLE `radgroupreply` (
 
 LOCK TABLES `radgroupreply` WRITE;
 /*!40000 ALTER TABLE `radgroupreply` DISABLE KEYS */;
-INSERT INTO `radgroupreply` VALUES (1,'user','Auth-Type',':=','CHAP'),(2,'user','Service-Type',':=','Framed-User'),(3,'user','Acct-Interim-Interval',':=','60'),(4,'user','Termination-Action',':=','1'),(5,'user','Session-Timeout',':=','60');
+INSERT INTO `radgroupreply` VALUES (1,'user','Auth-Type',':=','CHAP'),(2,'user','Service-Type',':=','Framed-User'),(3,'user','Acct-Interim-Interval',':=','60'),(4,'user','Termination-Action',':=','1');
 /*!40000 ALTER TABLE `radgroupreply` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -198,7 +199,7 @@ CREATE TABLE `radpostauth` (
   `reply` varchar(32) NOT NULL DEFAULT '',
   `authdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=123 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=140 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -207,6 +208,7 @@ CREATE TABLE `radpostauth` (
 
 LOCK TABLES `radpostauth` WRITE;
 /*!40000 ALTER TABLE `radpostauth` DISABLE KEYS */;
+INSERT INTO `radpostauth` VALUES (133,'ta','0x00bde8535e37bbd2e1752cce379dd5ffda','Access-Accept','2018-04-24 10:41:57'),(134,'ta','0x00af6da42ee7af0b228673d699f5d2991d','Access-Accept','2018-04-24 10:44:29'),(135,'cnl','0x0000d9514bbeeb6f268f2b5998b0e85e5f','Access-Accept','2018-04-24 10:51:54'),(136,'cnl','cnl','Access-Accept','2018-04-24 11:02:55'),(137,'cnl','0x00f38e11c776d4c818f96f78bb68ef1f29','Access-Accept','2018-04-24 11:06:26'),(138,'cnl','cnl','Access-Accept','2018-04-24 11:08:47'),(139,'cnl','cnl','Access-Accept','2018-04-24 11:08:52');
 /*!40000 ALTER TABLE `radpostauth` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -271,4 +273,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-24 14:09:02
+-- Dump completed on 2018-04-24 19:30:01

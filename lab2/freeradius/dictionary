@@ -31,6 +31,4 @@ $INCLUDE	/usr/share/freeradius/dictionary
 #ATTRIBUTE	My-Local-IPAddr		3001	ipaddr
 #ATTRIBUTE	My-Local-Integer	3002	integer
 ATTRIBUTE	Max-Hourly-Traffic	3003	integer
-ATTRIBUTE	Hourly-Traffic-Limit	3004	integer
-ATTRIBUTE       Max-Hourly-Session      3005    integer
-
+ATTRIBUTE       Max-Hourly-Session	3004    integer
